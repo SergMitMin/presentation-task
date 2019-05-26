@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- CI -->
+			<section>
+				Continuous Integration(CI)
+				<section>
+					<p>What is this?</p>
+					<p>Continuous Integration is a development practice that requires developers to integrate code into a
+						shared repository several times a day. Each check-in is verified by an automated build, allowing
+						teams to detect and fix problems early.</p>
+				</section>
+				<section>
+					<p>Benefits of using CI?</p>
+					<ul>
+						<li>Decrease some routine work of developer</li>
+						<li>Reduce integration problems, debugging time and allows company to deliver software faster</li>
+						<li>Increase visibility of work processes for each team member</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Rules of doing this</p>
+					<ul>
+						<li>Auto build using CI tools</li>
+						<li>Build should be covered by height amount of tests, and push should be tested to keep main branch
+							production-ready at any time
+						</li>
+						<li>Often commits and often pushes, to keep your branch close to master</li>
+						<li></li>
+					</ul>
+				</section>
+				<section>
+					<p>One of good CI practices - Git flow</p>
+					<img height="400px" src="img/git-flow.png" alt="Git flow">
+				</section>
+			</section>
+
+			<!-- CD -->
+			<section>Continuous Deployment & Continuous Delivery
+				<section>
+					Continuous Deployment is CI plus auto deployment of build to the test server.
+				</section>
+				<section>
+					Continuous Delivery is CI plus auto deployment of build to the production server.
+					And it is really risky thing to do. Becouse customer will be able to see your mistaces.
+				</section>
+				<section>
+					<img src="img/cd.png" alt="CD">
+				</section>
+			</section>
+
+
+			<!-- Tools  -->
+			<section>
+				CI/CD Tools with their advantages and disadvantages
+				<section><img src="img/tools.png" alt="Tools"></section>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
